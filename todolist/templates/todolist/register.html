@@ -1,0 +1,27 @@
+{% extends "todolist/layout.html" %}
+
+{% block body %}
+
+    <h1>سجل حساب جديد</h1>
+
+    <!--اظهار رسالة الخطأ-->
+    {% if message %}
+     <div>{{ message }}</div>
+    {% endif %}
+
+    <!--تعبئة بيانات التسجيل-->
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+        <input autofocus class="form-control" name="username" type="text"  placeholder="اسم المستخدم">
+        </div>
+        <div class="form-group">
+        <input class="form-control" name="password" type="password" placeholder="كلمة السر">
+        </div>
+        <div class="form-group">
+        <input autofocus class="form-control" name="confirmation" type="password" placeholder="تأكيد كلمة السر">
+        </div>
+        <input class="btn btn-primary" type="submit" value="تسجيل حسابك">
+    </form>
+
+    {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "todolist/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h1><b>     
+        اهلا بك في مشتريات اليوم
+    </b></h1>
+
+    <br>
+
+    <!--عرض القائمه الحاليه-->
+    {% for item in items %}
+        <div>
+            <li>
+                <ol>
+                    <form action="{% url 'remove' item.id %}" method="post">
+                        {% csrf_token %}
+                        {{ item }}
+                        <input class="btn btn-primary" type="submit" value="ازل">
+                    </form>
+                </ol>
+            </li>
+        </div>
+    {% endfor %}
+
+    <br>
+    
+    <!--اضافة عنصر الى القائمه-->
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+        <input class="form-control" autofocus name="item" type="text">
+        </div>
+        <input class="btn btn-primary" type="submit" value="اضف">
+    </form>
+
+    <br>
+    <div>
+        <button id="ip" class="btn btn-primary">مكاني الحالي</button>
+        <div id="ipinfo"></div>
+    </div>
+    <br>
+    <a href="{% url 'logout' %}">تسجل الخروج</a>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'todolist/list.js' %}"></script>
+{% endblock %}
