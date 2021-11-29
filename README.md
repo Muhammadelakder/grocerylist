@@ -16,4 +16,9 @@
 ## تعليمات البدء
 
 2. **ابدء التطبيق باستخدام الامر التالي**
+
+    `python manage.py makemigrations todolist`
+
+    `python manage.py migrate`
+    
     `python manage.py runserver`
