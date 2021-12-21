@@ -13,3 +13,7 @@ class listitems(models.Model):
 
     def __str__(self):
         return self.user and self.item
+
+    # اضافة اختبار للنموذج
+    def is_valid_listitems(self):
+        return self.item != self.user and self.item > 1
