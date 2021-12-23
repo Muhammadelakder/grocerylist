@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "com.herokuapp.listforhsop.twa",
+                     "sha256_cert_fingerprints": ["E1:45:43:41:E6:CE:F7:D4:A2:73:D1:EC:34:84:AE:12:33:79:EB:5E:F1:A0:3B:EA:83:80:49:AD:C3:A9:8B:AD"] }
+      }
+]
