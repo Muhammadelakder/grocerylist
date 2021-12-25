@@ -5,7 +5,7 @@
 
 **`https://listforhsop.herokuapp.com/login` جرب التطبيق**
 
-
+>[جرب التطبيق علي الهاتف](https://github.com/Muhammadelakder/grocerylist/raw/main/grocerylist.apk)
 
 
 [![Screenshot-from-2021-11-29-13-11-36.png](https://i.postimg.cc/d3VM3M2F/Screenshot-from-2021-11-29-13-11-36.png)](https://postimg.cc/VrpZZVZZ)
@@ -21,7 +21,7 @@
 3. **`pip` نزل**
 
 4. **نزل متطلبات عمل التطبيق**
-    `pip install -r requirements.text`
+    `pip install -r requirements.txt`
 
 ## تعليمات البدء
 
